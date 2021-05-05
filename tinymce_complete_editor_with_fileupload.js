@@ -1,5 +1,13 @@
-// ADD THIS in YOUR HTML PAGE <script src="//cdn.tiny.cloud/1/u6oa5pnpaa1vxho1md7uk4zmq2ai7xuf5o5wfgyrc131vpj6/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-// PLACE_YOUR_ID with Your TextArea ID
+/*------------------------------------------------------------------------------------BASIC SETTINGS------------------------------------------------------------------------
+//
+// 1. ADD THIS in YOUR HTML PAGE
+//<script src="//cdn.tiny.cloud/1/u6oa5pnpaa1vxho1md7uk4zmq2ai7xuf5o5wfgyrc131vpj6/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> 
+//
+// 2. PLACE_YOUR_ID with Your TextArea ID  
+//                                                                                                                                   
+// 3. CREATE A URL IN BACKEND and Replace With SERVER_URL And Access File By 'file' KEY
+//    and Return Response in JSON " {"location":"RETURN IMAGE URL IN RESPONSE OF THIS URL"}" 
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 tinymce.init({
         selector: "textarea#PLACE_YOUR_ID",
         height: 300,
@@ -8,7 +16,7 @@ tinymce.init({
             "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime nonbreaking",
             "save table contextmenu directionality emoticons template paste textcolor",
         ],
-        images_upload_url:"{% url 'upload_image' %}",
+        images_upload_url:"SERVER_URL",
         toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
         style_formats: [
             { title: "Bold text", inline: "b" },
